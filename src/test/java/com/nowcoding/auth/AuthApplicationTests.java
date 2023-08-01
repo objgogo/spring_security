@@ -5,6 +5,7 @@ import com.nowcoding.auth.entity.MemberEntity;
 import com.nowcoding.auth.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -19,6 +20,9 @@ class AuthApplicationTests {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Value("${jwt.secret.key}")
+    private String secretKey;
 
     @Test
     void contextLoads() {
@@ -40,6 +44,11 @@ class AuthApplicationTests {
                 .build();
 
         memberRepository.save(member);
+    }
+
+    @Test
+    void isSecretKey(){
+        System.out.println(secretKey);
     }
 
 }
