@@ -1,11 +1,3 @@
-# MySQL
-#spring:
-#  datasource:
-#    url: jdbc:mysql://nowcoding-kelal-prod.chuhmpmu2o6p.ap-northeast-2.rds.amazonaws.com/test_db_2
-#    username: admin
-#    password: 3(Ys)}&V#WmtYU3!
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-# JPA
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
